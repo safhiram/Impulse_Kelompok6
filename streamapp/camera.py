@@ -15,7 +15,7 @@ prototxtPath = os.path.sep.join([settings.BASE_DIR, "face_detector/deploy.protot
 weightsPath = os.path.sep.join([settings.BASE_DIR,"face_detector/res10_300x300_ssd_iter_140000.caffemodel"])
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 #maskNet = load_model(os.path.join(settings.BASE_DIR,'face_detector/mask_detector.model'))
-maskNet = load_model(os.path.join(settings.BASE_DIR,'face_detector/model_gray.h5'))
+maskNet = load_model(os.path.join(settings.BASE_DIR,'face_detector/model_baru3.h5'))
 
 
 class VideoCamera(object):
