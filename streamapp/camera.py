@@ -15,7 +15,7 @@ prototxtPath = os.path.sep.join([settings.BASE_DIR, "face_detector/deploy.protot
 weightsPath = os.path.sep.join([settings.BASE_DIR,"face_detector/res10_300x300_ssd_iter_140000.caffemodel"])
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 #maskNet = load_model(os.path.join(settings.BASE_DIR,'face_detector/mask_detector.model'))
-maskNet = load_model(os.path.join(settings.BASE_DIR,'face_detector/model_keras2.h5'))
+maskNet = load_model(os.path.join(settings.BASE_DIR,'face_detector/model_gray.h5'))
 
 
 class VideoCamera(object):
@@ -113,7 +113,7 @@ class MaskDetect(object):
 				face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
 				face = cv2.resize(face, (48, 48))
 				face = img_to_array(face)
-				face = preprocess_input(face)
+				# face = preprocess_input(face)
 
 				# add the face and bounding boxes to their respective
 				# lists
