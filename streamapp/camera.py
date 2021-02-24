@@ -173,7 +173,7 @@ class MaskDetect(object):
 		
 class LiveWebCam(object):
 	def __init__(self):
-		self.url = cv2.VideoCapture("rtsp://admin:Mumbai@123@203.192.228.175:554/")
+		self.url = cv2.VideoCapture()
 
 	def __del__(self):
 		cv2.destroyAllWindows()
